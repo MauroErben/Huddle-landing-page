@@ -1,0 +1,141 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('./images/bg-mobile.svg') no-repeat;
+    background-color: var(--Violet);
+}
+
+.cont {
+    padding: 32px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+main {
+    height: max-content;
+    display: flex;
+    flex-direction: column;  /* md: row */
+    padding: 16px 0;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+}
+
+.text-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* md: start */
+    text-align: center;
+    padding: 24px;
+    flex: 1;
+    color: #fff;
+}
+
+.text-content h1{
+    font-size: x-large;
+}
+
+.text-content p {
+    color: #ddd;
+}
+
+.text-content h2,p,button{
+    margin-top: 16px;
+}
+
+.btnRegister{
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: var(--Violet);
+    padding: 8px;
+    box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+}
+
+.btnRegister:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* md: end */
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.redes a {
+    width: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    padding: 4px;
+}
+
+.redes a:hover{
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+@media (min-width: 768px) {
+
+    body{
+        background: url('./images/bg-desktop.svg') no-repeat;
+        background-color: var(--Violet);
+    }
+
+    main{
+        flex-direction: row;
+    }
+
+    .text-content{
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    .text-content h1{
+        font-size: xx-large;
+    }
+
+    .redes{
+        justify-content: end;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
